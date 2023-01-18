@@ -5,7 +5,7 @@ const resultado = document.getElementById('sectionResultado');
 //Arreglos para usar como tipo de moneda;
 const moneda =["pesos ","centavos"];
 //objeto convertidor importado de modulo;
-import {convertidor} from "../modulos/cantidadArexto.js";
+import {convertidor} from "../modulos/cantidadAtexto.js";
 //Manejador del evento click del boton;
 inputCantidad.addEventListener('input',()=>{
     //usamos el método "convertirAtexto" del objeto importado "convertidor"

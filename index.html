@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000"/>
+    <meta name="author" content="Erayde Vázquez">
+    <meta name="keywords" content="javascript,programación,ejercicios,vsoft">
+    <meta property="og:image" content="./imgs/ogVimg.png"/>
+    <meta name="description" content="Páginade ejercicios de programación">
+    <meta property="og:title" content="vsoft">
+    <meta property="og:description" content="Páginade ejercicios de programación">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="icon" href="./imgs/ico.ico">
+    <title>Ejercicios y prácticas javascript</title>
+</head>
+
+<body>
+    <header>
+        <h1>JAVASCRIPT EJERCICIOS</h1>
+    </header>
+    <h2>Convertidor de cantidad numérica <br> a texto</h2>
+    <p>Elabore un objeto con un método que reciba una cantidad del valor de un input, construya un texto correpondiente
+    a los enteros y otro a los decimales, el método debe retornar otro objeto con ambos textos
+    como propiedades.</p><p class="strong">Ejemplo : objeto.convertirAtexto("223,83"); retorno -> {pesos:"doscientos veinte y tres",centavos:"ochenta y tres"} 
+    </p>
+    <p>* Cantidades menores o igual a 999 999 999 .  99</p>
+    <main>
+        <!--Ejercicio cantidad numérica a texto-->
+        <section class="datos">
+        <form>
+        <label for="inputCntidad">Cantidad</label>
+        <input type="number" id="inputCantidad" value="" placeholder="223.83">
+        </form>
+        </section>
+        <section class="resultado" id="sectionResultado">
+        </section>
+        <a href="none.html"> Código en github </a>
+        <!--Fin Ejercicio cantidad numérica a texto-->
+    </main>
+    <footer>
+        <img src="./imgs/logo.png" alt="imagotipo">
+    </footer>
+    <script src="./interfaz/interfaz.js" type="module"></script>
+</body>
+
+</html>

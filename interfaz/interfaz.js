@@ -1,11 +1,13 @@
 'use strict';
 //Elementos en el documento html;
 const inputCantidad = document.getElementById('inputCantidad');
-const resultado = document.getElementById('sectionResultado');
+const resultado = document.getElementById('sectionResultadoCantidad');
 //Arreglos para usar como tipo de moneda;
 const moneda =["pesos ","centavos"];
 //objeto convertidor importado de modulo;
 import {convertidor} from "../modulos/cantidadAtexto.js";
+//objeto credor de matriz con bloques importdo de modulo;
+import { creadorBloques } from "../modulos/bloques.js";
 //Manejador del evento click del boton;
 inputCantidad.addEventListener('input',()=>{
     //usamos el método "convertirAtexto" del objeto importado "convertidor"

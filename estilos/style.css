@@ -80,3 +80,6 @@ a{  display:block;
 .strong{
     font-weight:600;
 }
+.centerP{
+    text-align: center;
+}

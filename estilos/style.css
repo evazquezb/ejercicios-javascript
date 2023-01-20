@@ -78,7 +78,9 @@ main img{
     width:15em;
     margin: 1em auto;
     text-align: center;
+    border:2px solid black;
 }
+
 .strong{
     font-weight:600;
 }
@@ -121,7 +123,7 @@ main img{
     background-repeat: no-repeat;
  }
  .paraBloques{
-    min-height: 40vw;
+    min-height: 60vw;
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
@@ -133,8 +135,8 @@ main img{
         -ms-flex-pack: end;
             justify-content: flex-end;
     background-image: url(../imgs/bloquesAgua/sunOn.png),url(../imgs/bloquesAgua/00.png);
-    background-size: 6.5vw 7.5vw,100% 100%;
-    background-position:53.5% 48%,0 0;
+    background-size: 12vw 14vw,100% 100%;
+    background-position:56% 48.5%,0 0;
     background-repeat: no-repeat;
  }
  .rotar{
@@ -142,16 +144,24 @@ main img{
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
  }
+
 .datos *{
     display:block;
     margin:0.5em auto;
     border-radius: 0.15em;
 }
 
+.datos form{
+    min-height:10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .resultado .fila{ 
     position:relative;
     width:100%;
-    height:8vw;
+    height:12vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -165,7 +175,7 @@ main img{
 
 .resultado .fila div{
     display:inline-block;
-    width:8.33%;
+    width:12.5%;
     height:100%;
     background-repeat: no-repeat;
     -webkit-animation : fadein 1s ease-in;

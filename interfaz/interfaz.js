@@ -13,10 +13,10 @@ import { creadorBloques } from "../modulos/bloques.js";
 //FUNCIONES
 //Funcion para agregar manejador a los range creadores de bloques
 const agregarManejadorAbloquesRanges = () => {
-   const bloquesRanges = document.querySelectorAll("#br1");
+   const bloquesRanges = document.querySelectorAll(".rangesBloques");
    bloquesRanges.forEach(range=>range.addEventListener('change',dibujarBloques.bind(bloquesRanges)));
 } 
-//Funcion para dibujar matriz con bloques y agua, medianto el objeto creadorBloques importado del modulo bloques.
+//Funcion para dibujar matriz con bloques y agua, mediante el objeto creadorBloques importado del modulo bloques.
 const dibujarBloques = function(){
     const valores = [];
     resultadoBloques.innerHTML="";
@@ -30,7 +30,7 @@ const dibujarBloques = function(){
             const bloque = document.createElement("div");
             matriz[index][idx]=='██' ? bloque.setAttribute("class","bloque") :
             matriz[index][idx]=='~~' ? bloque.setAttribute("class","agua") : null;
-            if(matriz.length>2 && index==matriz.length-3 && idx==6 && matriz[index][idx]!='██')
+            if(matriz.length>2 && index==matriz.length-3 && idx==4 && matriz[index][idx]!='██')
                 matriz[index][idx]==null ? null:bloque.setAttribute("class","solOff");
             flexRow.appendChild(bloque); 
         });

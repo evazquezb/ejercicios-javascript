@@ -14,9 +14,9 @@ const matriz = function (array) {
 
 /* funcion para colocar blockes en la matriz los campos con bloques contendrán estos caracteres '██' */
 const bloques= function(mtrx){
-    //creamos un arreglo bidimensional usando la función matriz()
+    //creamos una copia del arreglo bidimensional para no alterar el original
     const newMtrx = crearCopia(mtrx);
-    //creamos una copia del arreglo para no alterar el original
+     //creamos una copia del arreglo base para no alterar el original
     const newArreglo = [...arreglo];
     //colocmos los blockes en su posicion de acuerdo al arreglo que representa los bloques
     for (let indice = newMtrx.length - 1; indice >= 0; indice--) {

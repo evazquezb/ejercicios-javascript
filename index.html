@@ -33,8 +33,10 @@
         <p class="centerP">* Cantidades menores o igual a 999 999 999 .  99</p>
         <section class="datos">
             <form>
-            <label for="inputCntidad">Ingrese CANTIDAD y vea resultado</label>
+            <div class="formGroup">
+            <label for="inputCantidad">Ingrese CANTIDAD y vea resultado</label>
             <input type="number" id="inputCantidad" value="" placeholder="223.83">
+            </div>
             </form>
         </section>
         <a href="https://github.com/evazquezb/ejercicios-javascript/blob/master/modulos/cantidadAtexto.js"> Código en github </a>
@@ -49,28 +51,39 @@
         por agua y otros vacíos. Resultado reflejado en la imagen. </p>
         <p class="centerP">* A continuación puede seleccionar los valores de un arreglo
             y se visualizarán los resultados.
-            -por motivos de visualización, el arreglo sólo podrá tener doce campos y sus valores no podrán ser mayores a cinco.
+            -por motivos de visualización, el arreglo sólo podrá tener ocho campos y sus valores no podrán ser mayores a cinco.
             PERO, el código funciona para cualquier tamaño de arreglo.</p>
             <p class="strong centerP">POR FAVOR no vayas ahogar el sol :(</p>
-        <section class="datos rotar">
+        <section class="datos datosBloques">
             <form>
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
-                <input type="range" min="0" max="5" value="0" id="br1">
+    
+                <label for="rb1">valor 1 del arreglo<input type="range" min="0" max="5" value="0" class="rangesBloques" id="rb1"></label>
+                
+                <label for="rb2">valor 2 del arreglo <input type="range" min="0" max="5" value="0" class="rangesBloques" id="rb2"></label>
+               
+                <label for="rb3">valor 3 del arreglo <input type="range" min="0" max="5" value="0" class="rangesBloques" id="rb3"></label>
+               
+                <label for="rb4">valor 4 del arreglo<input type="range" min="0" max="5" value="0" class="rangesBloques" id="rb4"></label>
+                
+                <label for="rb5">valor 5 del arreglo <input type="range" min="0" max="5" value="0" class="rangesBloques" id="rb5"></label>
+               
+                <label for="rb6">valor 6 del arreglo<input type="range" min="0" max="5" value="0" class="rangesBloques" id="rb6"></label>
+                
+                <label for="rb7">valor 7 del arreglo<input type="range" min="0" max="5" value="0" class="rangesBloques" id="rb7"></label>
+                
+                <label for="rb8">valor 8 del arreglo<input type="range" min="0" max="5" value="0" class="rangesBloques" id="rb8"></label>
+                
+                
             </form>
         </section>
-        <a href="https://github.com/evazquezb/ejercicios-javascript/blob/master/modulos/bloques.js"> Código en github </a>
         <section class="resultado  paraBloques" id="sectionResultadoBloques">
+            <div class="bloque"></div>
+            <div class="agua"></div>
+            <div class="solOn"></div>
+            <div class="solOff"></div>
         </section>
+        <a href="https://github.com/evazquezb/ejercicios-javascript/blob/master/modulos/bloques.js"> Código en github </a>
+        <div class="separador"></div>
         <!--Fin Ejercicio bloques y agua -->
 
 

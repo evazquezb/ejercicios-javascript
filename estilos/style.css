@@ -80,7 +80,9 @@ main img{
     text-align: center;
     border:2px solid black;
 }
-
+.datosBloques{
+    width:20em;
+}
 .strong{
     font-weight:600;
 }
@@ -90,6 +92,7 @@ main img{
 .resultado{
     width:100%;
     background-color: #6f9;
+    border:none;
 }
 .division{
     position:relative;
@@ -139,12 +142,7 @@ main img{
     background-position:56% 48.5%,0 0;
     background-repeat: no-repeat;
  }
- .rotar{
-    -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
- }
-
+ 
 .datos *{
     display:block;
     margin:0.5em auto;
@@ -153,9 +151,6 @@ main img{
 
 .datos form{
     min-height:10em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .resultado .fila{ 
@@ -174,6 +169,7 @@ main img{
 }
 
 .resultado .fila div{
+    content:"";
     display:inline-block;
     width:12.5%;
     height:100%;

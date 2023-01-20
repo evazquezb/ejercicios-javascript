@@ -24,7 +24,7 @@ const bloques= function(mtrx){
             element > 0?(newMtrx[indice][index] = '██',newArreglo[index] -= 1):null;
         });
     }
-    //retornamos la copia creada pero ya con los campos llenos, correspondientes a los bloques
+    //retornamos la copia del arreglo bidimensional creada pero ya con los campos llenos, correspondientes a los bloques
     return newMtrx;
 }
 
@@ -56,7 +56,7 @@ function vacios(mtrx){
     return newMtrx;
 }
 
-/* Esta funcion cuentas los campos de la matriz que contienen bloques pero no es usada*/
+/* Esta funcion cuentas los campos de la matriz que contienen agua pero no es usada*/
 //se contruyó solo para propósitos de desarrollo y chequeo
 function cantidadAgua(matrizFinal){ 
     let tm=0;

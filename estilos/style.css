@@ -112,17 +112,17 @@ main img{
  }
  .bloque{
     background-size: cover;
-    background-image: url(../imgs/bloquesAgua/block.png);
+    background-image: url(../imgs/bloquesAgua/block.webp);
  }
  .solOn{
     background-size: contain;
-    background-image: url(../imgs/bloquesAgua/sunOn.png); 
+    background-image: url(../imgs/bloquesAgua/sunOn.webp); 
  }
  .solOff{
     background-size: 100% 100%,80% 80%;
-    background-image: -webkit-gradient(linear,left top, left bottom,from(#00f8),to(#00f8)),url(../imgs/bloquesAgua/sunOff.png);
-    background-image: -o-linear-gradient(#00f8,#00f8),url(../imgs/bloquesAgua/sunOff.png);
-    background-image: linear-gradient(#00f8,#00f8),url(../imgs/bloquesAgua/sunOff.png);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#00f8),to(#00f8)),url(../imgs/bloquesAgua/sunOff.webp);
+    background-image: -o-linear-gradient(#00f8,#00f8),url(../imgs/bloquesAgua/sunOff.webp);
+    background-image: linear-gradient(#00f8,#00f8),url(../imgs/bloquesAgua/sunOff.webp);
     background-repeat: no-repeat;
  }
  .paraBloques{
@@ -137,7 +137,7 @@ main img{
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    background-image: url(../imgs/bloquesAgua/sunOn.png),url(../imgs/bloquesAgua/00.png);
+    background-image: url(../imgs/bloquesAgua/sunOn.webp),url(../imgs/bloquesAgua/00.png);
     background-size: 12vw 14vw,100% 100%;
     background-position:56% 48.5%,0 0;
     background-repeat: no-repeat;

@@ -56,14 +56,6 @@ function vacios(mtrx){
     return newMtrx;
 }
 
-/* Esta funcion cuentas los campos de la matriz que contienen agua pero no es usada*/
-//se contruyó solo para propósitos de desarrollo y chequeo
-function cantidadAgua(matrizFinal){ 
-    let tm=0;
-    matrizFinal.forEach(el=>el.forEach(e=>e=="~~"?tm+=1:null))
-    return tm;
-}
-
 /*Esta función será el metodo principal del objeto a exportar*/
 //hará uso de mas demás funciones y devolverá la matriz completa.
 const crear = function(array){

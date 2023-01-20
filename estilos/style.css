@@ -1,3 +1,4 @@
+
 @font-face {
     font-family:varela ;
     src: url("../fonts/VarelaRound.ttf");
@@ -21,9 +22,15 @@ body{
 header,footer{
     position:relative;
     width:100%;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 5em;
     background-color: #efefef;
     border:0.01px solid #0000;
@@ -53,9 +60,8 @@ p{
     text-align: justify;
 }
 img{
-    position:absolute;
-    left:0;
-    height:90%;
+    position:relative;
+    width:90%;
     margin:0.5em;
 }
 a{  display:block;
@@ -63,19 +69,15 @@ a{  display:block;
     color:#111;
     font-size:0.75em;
 }
+main img{
+    display:block;
+    margin:0 auto;
+}
 .datos,.resultado{
     position:relative;
     width:15em;
     margin: 1em auto;
     text-align: center;
-}
-.resultado{
-    width:100%;
-}
-.datos *{
-    display:block;
-    margin:0.5em auto;
-    border-radius: 0.15em;
 }
 .strong{
     font-weight:600;
@@ -83,3 +85,101 @@ a{  display:block;
 .centerP{
     text-align: center;
 }
+.resultado{
+    width:100%;
+    background-color: #6f9;
+}
+.division{
+    position:relative;
+    width:100%;
+    height: 8em;
+    background-color: #efefef;
+}
+.logo{
+    height:90%;
+    width:auto;
+}
+.agua{
+    background-size: cover;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#00f8),to(#00f8));
+    background-image: -o-linear-gradient(#00f8,#00f8);
+    background-image: linear-gradient(#00f8,#00f8);
+ }
+ .bloque{
+    background-size: cover;
+    background-image: url(../imgs/bloquesAgua/block.png);
+ }
+ .solOn{
+    background-size: contain;
+    background-image: url(../imgs/bloquesAgua/sunOn.png); 
+ }
+ .solOff{
+    background-size: 100% 100%,80% 80%;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#00f8),to(#00f8)),url(../imgs/bloquesAgua/sunOff.png);
+    background-image: -o-linear-gradient(#00f8,#00f8),url(../imgs/bloquesAgua/sunOff.png);
+    background-image: linear-gradient(#00f8,#00f8),url(../imgs/bloquesAgua/sunOff.png);
+    background-repeat: no-repeat;
+ }
+ .paraBloques{
+    min-height: 40vw;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-image: url(../imgs/bloquesAgua/sunOn.png),url(../imgs/bloquesAgua/00.png);
+    background-size: 6.5vw 7.5vw,100% 100%;
+    background-position:53.5% 48%,0 0;
+    background-repeat: no-repeat;
+ }
+ .rotar{
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+ }
+.datos *{
+    display:block;
+    margin:0.5em auto;
+    border-radius: 0.15em;
+}
+
+.resultado .fila{ 
+    position:relative;
+    width:100%;
+    height:8vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        vertical-align: bottom;
+}
+
+.resultado .fila div{
+    display:inline-block;
+    width:8.33%;
+    height:100%;
+    background-repeat: no-repeat;
+    -webkit-animation : fadein 1s ease-in;
+            animation : fadein 1s ease-in;
+ }
+
+ @-webkit-keyframes fadein {
+        0%{opacity:0}
+        100%{opacity:1}
+}
+
+ @keyframes fadein {
+        0%{opacity:0}
+        100%{opacity:1}
+}
+ 
+

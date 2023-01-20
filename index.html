@@ -19,29 +19,65 @@
 
 <body>
     <header>
+        <img src="./imgs/logoo.png" alt="imagotipo" class="logo">
         <h1>JAVASCRIPT EJERCICIOS</h1>
     </header>
-    <h2>Convertidor de cantidad numérica <br> a texto</h2>
-    <p>Elabore un objeto con un método que reciba una cantidad del valor de un input, construya un texto correpondiente
-    a los enteros y otro a los decimales, el método debe retornar otro objeto con ambos textos
-    como propiedades.</p><p class="strong centerP">Ejemplo : objeto.convertirAtexto("223,83"); retorno -> {pesos:"doscientos veinte y tres",centavos:"ochenta y tres"} 
-    </p>
-    <p class="centerP">* Cantidades menores o igual a 999 999 999 .  99</p>
+    
     <main>
         <!--Ejercicio cantidad numérica a texto-->
+        <h2>Convertidor de cantidad numérica <br> a texto</h2>
+        <p>Elabore un objeto con un método que reciba una cantidad del valor de un input, construya un texto correpondiente
+        a los enteros y otro a los decimales, el método debe retornar otro objeto con ambos textos
+        como propiedades.</p><p class="strong centerP">Ejemplo : objeto.convertirAtexto("223,83"); retorno -> {pesos:"doscientos veinte y tres",centavos:"ochenta y tres"} 
+        </p>
+        <p class="centerP">* Cantidades menores o igual a 999 999 999 .  99</p>
         <section class="datos">
-        <form>
-        <label for="inputCntidad">Ingrese CANTIDAD y vea resultado</label>
-        <input type="number" id="inputCantidad" value="" placeholder="223.83">
-        </form>
-        </section>
-        <section class="resultado" id="sectionResultado">
+            <form>
+            <label for="inputCntidad">Ingrese CANTIDAD y vea resultado</label>
+            <input type="number" id="inputCantidad" value="" placeholder="223.83">
+            </form>
         </section>
         <a href="https://github.com/evazquezb/ejercicios-javascript/blob/master/modulos/cantidadAtexto.js"> Código en github </a>
+        <section class="resultado" id="sectionResultadoCantidad">
+        </section>
         <!--Fin Ejercicio cantidad numérica a texto-->
+        <div class="division"></div>
+        <!--Ejercicio bloques y agua -->
+        <h2>Crear matriz de bloques y agua atrapada entre bloques a partir de los datos de un arreglo</h2>
+        <img src="./imgs/bloquesAgua/ejemplo.png" alt="ejemplo ejercicio de bloques" >
+        <p class="strong centerP">Ejemplo : [2,0,2,5,7,1,2,1,1,5,1,3,3]; Resultado -> una matriz, con campos ocupados por bloques, otros
+        por agua y otros vacíos. Resultado reflejado en la imagen. </p>
+        <p class="centerP">* A continuación puede seleccionar los valores de un arreglo
+            y se visualizarán los resultados.
+            -por motivos de visualización, el arreglo sólo podrá tener doce campos y sus valores no podrán ser mayores a cinco.
+            PERO, el código funciona para cualquier tamaño de arreglo.</p>
+            <p class="strong centerP">POR FAVOR no vayas ahogar el sol :(</p>
+        <section class="datos rotar">
+            <form>
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+                <input type="range" min="0" max="5" value="0" id="br1">
+            </form>
+        </section>
+        <a href="https://github.com/evazquezb/ejercicios-javascript/blob/master/modulos/cantidadAtexto.js"> Código en github </a>
+        <section class="resultado  paraBloques" id="sectionResultadoBloques">
+        </section>
+        <!--Fin Ejercicio bloques y agua -->
+
+
+
+
     </main>
     <footer>
-        <img src="./imgs/logoo.png" alt="imagotipo">
     </footer>
     <script src="./interfaz/interfaz.js" type="module"></script>
 </body>

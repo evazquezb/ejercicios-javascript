@@ -1,18 +1,13 @@
-
 @font-face {
     font-family:varela ;
     src: url("../fonts/VarelaRound.ttf");
     font-display:fallback;
 }
-
-
 @font-face {
     font-family:nunito;
     src: url("../assets/fonts/Nunito.ttf");
     font-display:fallback;
 }
-
-
 body{  
     background-color: #fff;
     font-family:'varela',sans-serif;
@@ -193,7 +188,6 @@ main img{
         height:7.2vw; 
     }
 }
-
 .resultado .fila div{
     display:inline-block;
     width:12.5%;

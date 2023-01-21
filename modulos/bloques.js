@@ -2,6 +2,8 @@
 let arreglo =[]
 /*funcion para crear una matriz a partir del arreglo*/
 const matriz = function (array) {
+    array=validar(array);
+    if(!array) return false;
     let mtrx = [];
     let altura = 0;
     //calculo altura
@@ -59,13 +61,19 @@ function vacios(mtrx){
 /*Esta función será el metodo principal del objeto a exportar*/
 //hará uso de mas demás funciones y devolverá la matriz completa.
 const crear = function(array){
-    //Si el argumento no es un arreglo retornamos false
-    if(!Array.isArray(array)) return false;
-    //Si es un arreglo y todos sus elementos no son numeros entero o no se pueden convertir a numero entero
-    //retornamos false;
-    if( !array.every(n=>!(n instanceof Object) && Number.isInteger(Number(n))) ) return false;
+    array=validar(array);
+    if(!array) return false;
     arreglo = [...array];
     return vacios(bloques(matriz(array)));
+}
+
+//funcion que valida que el argumento recibido en las demas funciones
+//sea un array de elementos que sean numeros enteros o se puedan convertir a numeros enteros
+//caso contrario retorna false;
+function validar(array){
+    if(!Array.isArray(array)) return false;
+    if( !array.every(n=>!(n instanceof Object) && Number.isInteger(Number(n))) ) return false;
+    return array;
 }
 
 const creadorBloques = {};

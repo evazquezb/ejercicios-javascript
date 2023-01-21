@@ -50,3 +50,4 @@ inputCantidad.addEventListener('input',()=>{
 
 window.addEventListener("load",agregarManejadorAbloquesRanges);
 
+

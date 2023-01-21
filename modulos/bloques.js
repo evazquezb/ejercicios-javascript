@@ -59,6 +59,11 @@ function vacios(mtrx){
 /*Esta función será el metodo principal del objeto a exportar*/
 //hará uso de mas demás funciones y devolverá la matriz completa.
 const crear = function(array){
+    //Si el argumento no es un arreglo retornamos false
+    if(!Array.isArray(array)) return false;
+    //Si es un arreglo y todos sus elementos no son numeros entero o no se pueden convertir a numero entero
+    //retornamos false;
+    if( !array.every(n=>!(n instanceof Object) && Number.isInteger(Number(n))) ) return false;
     arreglo = [...array];
     return vacios(bloques(matriz(array)));
 }

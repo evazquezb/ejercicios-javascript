@@ -6,7 +6,7 @@ const matriz = function (array) {
     if(!array) return false;
     let mtrx = [];
     //calculo altura(tomo el valor mas alto del array)
-    let altura = Math.max(...array);
+    let altura = array.reduce((a,b)=>Math.max(a,b),-Infinity);
     //creo un arreglo bidimensional con dicha altura 
     for (let indice = 0; indice < altura; indice++)  mtrx.push(new Array(array.length).fill('~~'));
     //retorno el arreglo creado
@@ -71,7 +71,7 @@ const crear = function(array){
 //caso contrario retorna false;
 function validar(array){
     if(!Array.isArray(array)) return false;
-    if( !array.every(n=>!(n instanceof Object) && Number.isInteger(Number(n))) ) return false;
+    if( array.length==0 || !array.every(n=>!(n instanceof Object) && Number.isInteger(Number(n))) ) return false;
     return array;
 }
 

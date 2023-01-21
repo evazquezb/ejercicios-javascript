@@ -5,9 +5,8 @@ const matriz = function (array) {
     array=validar(array);
     if(!array) return false;
     let mtrx = [];
-    let altura = 0;
-    //calculo altura
-    array.forEach(number => altura = number > altura ? number : altura);
+    //calculo altura(tomo el valor mas alto del array)
+    let altura = Math.max(...array);
     //creo un arreglo bidimensional con dicha altura 
     for (let indice = 0; indice < altura; indice++)  mtrx.push(new Array(array.length).fill('~~'));
     //retorno el arreglo creado

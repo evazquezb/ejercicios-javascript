@@ -20,9 +20,11 @@ const agregarManejadorAbloquesRanges = () => {
 const dibujarBloques = function(){
     const valores = [];
     resultadoBloques.innerHTML="";
-    resultadoBloques.childNodes.forEach(node=>console.log(node));
     this.forEach(range=>valores.push(range.value));
+    //creamos la matriz con la funcion crear del objeto creadorBloques;
     const matriz = creadorBloques.crear(valores);
+    //por cada campo de la matriz devuelta, dibujamos un div 
+    //ya sea bloque o agua;
     matriz.forEach((fila,index)=>{
         const flexRow=document.createElement("div");
         flexRow.setAttribute("class","fila"); 

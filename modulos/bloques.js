@@ -71,7 +71,7 @@ const crear = function(array){
 //caso contrario retorna false;
 function validar(array){
     if(!Array.isArray(array)) return false;
-    if( array.length==0 || !array.every(n=>!(n instanceof Object) && Number.isInteger(Number(n))) ) return false;
+    if( array.length==0 || array.some(n=>n instanceof Object) || !array.every(n=>Number.isInteger(Number(n))) || array.some(n=>n<0) ) return false;
     return array;
 }
 

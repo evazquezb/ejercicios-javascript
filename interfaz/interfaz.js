@@ -37,7 +37,7 @@ const dibujarBloques = function(){
             flexRow.appendChild(bloque); 
         });
         resultadoBloques.appendChild(flexRow);
-    })
+    });
 }
 //MANEJADORES de eventos
 //Manejador del evento input del input cantidad pra convertir a letras;

@@ -28,7 +28,7 @@ const udc = (cantidad) => {
     //agregamos esos tres elementos al array de las cantidades divididas
     cantidadUDC.unshift(fragmento);
     //esos mismos 3 elementos los eliminamos de la cantidad para volver a llamar la funcion
-    cantidad.splice(indice-3);//,indice);
+    cantidad.splice(indice-3);
     return udc(cantidad);
 }
 
@@ -76,6 +76,7 @@ const convertirAtexto = function(numero){
     //Usamos la funcion udc con el arreglo "n" para subdividir toda la cantidad
     //centavos y pesos en arreglos de 3 (unidades,decenas y centenas)
     let pesos = udc(Array.from(n[0]));
+    console.log(JSON.stringify(pesos));
     //usamos la funcion aTexto para construir la cadena de texto correpondiente a los pesos
     pesos = aTexto(pesos);
     //elaboramos el arreglo de centavos rellenando con ceros de ser necesario pues debe contener 3 caracteres para poder ser tratados como

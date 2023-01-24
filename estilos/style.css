@@ -30,9 +30,7 @@ header,footer{
     background-color: #99f;
     border:0.01px solid #0000;
 }
-footer{
-    background-color: #efefef;
-}
+
 main{
     min-height: 40vh;
 }

@@ -9,9 +9,8 @@ const calificativos = ["","mil ",["millon ","millones "]];
 
 /* FUNCIONES */
 
-//FUNCION Recibe un arreglo que representa una cantidad
-//Retorna un array con elementos que representan
-//las unidades,decenas y centenas;
+//FUNCION Recibe un arreglo que representa una cantidad (["1","2","3","4","5","6","7"])
+//Retorna un array dividido de 3 en 3 ([ ["1"],["2","3","4"],["5","6","7"] ]) 
 const cantidadUDC=[];
 const udc = (cantidad) => {
     //Si la cantidad tiene menos de 3 elementos, significa que acaba la recursion,
@@ -25,16 +24,16 @@ const udc = (cantidad) => {
     }
     //tomamos un fragmento de 3 numeros de la cantidad recibida
     const indice = cantidad.length;
-    const fragmento = cantidad.slice(indice-3,indice);
+    const fragmento = cantidad.slice(indice-3);
     //agregamos esos tres elementos al array de las cantidades divididas
     cantidadUDC.unshift(fragmento);
     //esos mismos 3 elementos los eliminamos de la cantidad para volver a llamar la funcion
-    cantidad.splice(indice-3,indice);
+    cantidad.splice(indice-3);
     return udc(cantidad);
 }
 
-//FUNCION que Recibe un arreglo que represent la cantidad
-//ya subdividido en unidades,decenas,centenas. Los procesa por segmento recursivamente
+//FUNCION que Recibe un arreglo que represent la cantidad ya subdividido en elementos de 3 mediante la funcion udc(). 
+//Los procesa por segmento recursivamente 
 //y retorna una cadena de texto construida en base a los array que funcionan como diccionarios
 let str="";
 const aTexto = (cantidad) => {
@@ -58,8 +57,8 @@ const aTexto = (cantidad) => {
     //construimos la cadena en base a unidades,decenas y centenas usados como indice en los arreglos diccionarios
     str+=`${ c<1 ? centenas[1][0] : c>1 ? centenas[c] : d||u ? centenas[1][2]:centenas[1][1] }${d==1&&u<6?excepciones[u]:decenas[d]}${d>1&&u||(d==1&&u>5)?"y ":""}${(d==1&&u<6) || u==0 ?"":unidades[u]}`;
     if(c>0||d>0||u>0){
-        if(Array.isArray(calificativos[calificativo])) 
-        u==1 ? str+=calificativos[calificativo][0] : str+=calificativos[calificativo][1];
+        if(Array.isArray(calificativos[calificativo]))   
+            u==1 && d<1 ? str+=calificativos[calificativo][0] : str+=calificativos[calificativo][1];
         else str+=calificativos[calificativo];
     }
     //eliminamos ese segmento del arreglo cantidad y llamamos de nuevo esta funcion con el nuevo arreglo ya sin el segmento procesado
@@ -77,6 +76,7 @@ const convertirAtexto = function(numero){
     //Usamos la funcion udc con el arreglo "n" para subdividir toda la cantidad
     //centavos y pesos en arreglos de 3 (unidades,decenas y centenas)
     let pesos = udc(Array.from(n[0]));
+    console.log(JSON.stringify(pesos));
     //usamos la funcion aTexto para construir la cadena de texto correpondiente a los pesos
     pesos = aTexto(pesos);
     //elaboramos el arreglo de centavos rellenando con ceros de ser necesario pues debe contener 3 caracteres para poder ser tratados como

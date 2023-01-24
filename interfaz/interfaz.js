@@ -48,7 +48,7 @@ const crearCombinaciones = function(event){
     resultado.innerHTML="";
     const longitud = document.getElementById("inputCantidadElementosCombinacion");
     const combinaciones = conjunto.combinar(["rojo","verde","azul","blanco","negro"],longitud.value);
-    resultado.innerHTML=`<h3>Las combinaciones son: ${combinaciones?combinaciones.length:'cero'}</h3>`;
+    resultado.innerHTML=`<h3>Las posibilidades son: ${combinaciones?combinaciones.length:'cero'}</h3>`;
     combinaciones ?
     combinaciones.forEach(elemento=>resultado.innerHTML+=`<div>${JSON.stringify(elemento)}</div><br>`) :
     resultado.innerHTML+=`<h3>Elija un número entre "1" y la cantidad de colores</h3>`;

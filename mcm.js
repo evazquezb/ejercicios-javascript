@@ -5,7 +5,7 @@ import {numerosPrimos} from "../modulos/numerosPrimos.js";
 /* validar y numerosPrimos, son ficheros modulos que puedes encontrar en la carpeta modulos
  de este repositorio */
 
-//creamos una variable que sirv de indice en el arreglo secuencia de numerosPrimos;
+//creamos una variable que sirva de indice en el arreglo secuencia de numerosPrimos;
 let indiceNumeroPrimo = 0;
 //Establecemos el numero primo actual de acuerdo al idice;
 let numeroPrimoActual = numerosPrimos[indiceNumeroPrimo];

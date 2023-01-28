@@ -1,3 +1,4 @@
+import validar from './validarArrayEnterosPositivos.js';
 //Constante para guardar el arreglo que el objeto.crear() recibirá como argumento;
 let arreglo =[]
 /*funcion para crear una matriz a partir del arreglo*/
@@ -64,15 +65,6 @@ const crear = function(array){
     if(!array) return false;
     arreglo = [...array];
     return vacios(bloques(matriz(array)));
-}
-
-//funcion que valida que el argumento recibido en las demas funciones
-//sea un array de elementos que sean numeros enteros o se puedan convertir a numeros enteros
-//caso contrario retorna false;
-function validar(array){
-    if(!Array.isArray(array)) return false;
-    if( array.length==0 || array.some(n=>n instanceof Object) || !array.every(n=>Number.isInteger(Number(n))) || array.some(n=>n<0) ) return false;
-    return array;
 }
 
 const creadorBloques = {};

@@ -4,6 +4,7 @@ const inputCantidad = document.getElementById('inputCantidad');
 const resultado = document.getElementById('sectionResultadoCantidad');
 const resultadoBloques = document.getElementById('sectionResultadoBloques');
 const btnCrearCombinaciones = document.getElementById('btnCrearCombinaciones');
+const btnReducirFraccion = document.getElementById('btnReducirFraccion');
 //Arreglos para usar como tipo de moneda;
 const moneda =["pesos ","centavos"];
 //objeto convertidor importado de modulo;
@@ -12,7 +13,8 @@ import {convertidor} from "../modulos/cantidadAtexto.js";
 import { creadorBloques } from "../modulos/bloques.js";
 //objeto para crear combinaciones;
 import { conjunto } from "../modulos/conjunto.js";
-
+//objeto para reducir fracciones;
+import { euclides } from "../modulos/euclides.js";
 //FUNCIONES
 //Funcion para agregar manejador a los range creadores de bloques
 const agregarManejadorAbloquesRanges = () => {
@@ -54,6 +56,23 @@ const crearCombinaciones = function(event){
     resultado.innerHTML+=`<h3>Elija un número entre "1" y la cantidad de colores</h3>`;
     event.preventDefault();
 }
+//
+const reducirFraccion = function(event){
+    event.preventDefault();
+    const numerador = document.getElementById("inputNumerador").value;
+    const denominador = document.getElementById("inputDenominador").value;
+    let fraccionReducida;
+    if(numerador && denominador ){
+    fraccionReducida = euclides.reducirFraccion(numerador,denominador)}
+    else fraccionReducida = false;
+    if(fraccionReducida){
+        document.querySelector('.paraFracciones').innerHTML=`<p class='centerP strong'>La fraccion reducida es : ${fraccionReducida[0]}/${fraccionReducida[1]}</p>`;
+    }
+    else{
+        document.querySelector('.paraFracciones').innerHTML="No ha ingresado numerador o denominador";
+    }
+}
+
 //MANEJADORES de eventos
 //Manejador del evento input del input cantidad pra convertir a letras;
 inputCantidad.addEventListener('input',()=>{
@@ -65,6 +84,7 @@ inputCantidad.addEventListener('input',()=>{
     //cantidad.value="";
 });
 btnCrearCombinaciones.addEventListener('click',crearCombinaciones);
+btnReducirFraccion.addEventListener('click',reducirFraccion);
 
 window.addEventListener("load",agregarManejadorAbloquesRanges);
 

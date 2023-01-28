@@ -15,6 +15,8 @@ import { creadorBloques } from "../modulos/bloques.js";
 import { conjunto } from "../modulos/conjunto.js";
 //objeto para reducir fracciones;
 import { euclides } from "../modulos/euclides.js";
+//objeto pra calcular minimo comun multiplo;
+import { minimoComunMultiplo } from "../modulos/mcm.js";
 //FUNCIONES
 //Funcion para agregar manejador a los range creadores de bloques
 const agregarManejadorAbloquesRanges = () => {
@@ -56,7 +58,7 @@ const crearCombinaciones = function(event){
     resultado.innerHTML+=`<h3>Elija un número entre "1" y la cantidad de colores</h3>`;
     event.preventDefault();
 }
-//
+//Funcion para reducir fracciones
 const reducirFraccion = function(event){
     event.preventDefault();
     const numerador = document.getElementById("inputNumerador").value;
